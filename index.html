@@ -1,39 +1,775 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Mi primera página web</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio Nidia</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Archivo CSS para los estilos -->
+  <script src="https://kit.fontawesome.com/99fbba3b83.js" crossorigin="anonymous"></script>
+  <style>
+        /* Reset de estilos */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      background-image: url(trenza.jpg);
+      
+      
+    }
+
+    header {
+      background-color: none;
+      padding: 40px;
+      color: #FF1493;
+      background-image: url("sl_013020_27500_40.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 200px; /* Ajusta la altura según tus necesidades */
+      background-size: cover;
+      background-position: center;
+      height: 200px; /* Ajusta la altura según tus necesidades */
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 15px; 
+    }
+
+    nav ul li a {
+      color: #272626;
+      text-decoration: none;
+      border: 3px solid rgba(16, 255, 231, 0.284);
+      box-shadow: 0 0 5px rgba(181, 254, 248, 0.3);
+    }
+
+    section {
+      padding: 80px;
+      background-color: #213d3d2d;
+
+
+    }
+
+    section#inicio p {
+      color: #ededed;
+      text-decoration: none;
+      background-color: #0a48486c;
+      padding: 50px 40px;
+      text-align: center;
+      text-align: justify;
+      /font-size: 15px; /* Ajusta el tamaño de fuente */
+      /white-space: pre-wrap; /* Muestra el texto en varios renglones */
+      
+    }
+
+    section#proyectos h3 {
+      color: rgba(17, 238, 216, 0.721);
+      
+    }
+
+
+
+    section#galeria {
+      padding: 0px;
+      background-color: rgba(239, 239, 239, 0.952);
+    }
+
+    section#contacto {
+      background-color: #1b1a1a;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+      
+    }
+
+    section#contacto h2 {
+      margin-bottom: 30px;
+      text-align: center;
+      color: rgba(17, 238, 216, 0.721);
+      background-color: #1b1a1a;
+      padding: 15px 40px;
+      border-radius: 15px;
+      border: 2px solid rgba(17, 238, 216, 0.284);
+      box-shadow: 0 0 10px rgba(181, 254, 248, 0.3);
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+      
+      
+    }
+
+    #inicio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+    }
+
+    #contacto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      
+      margin-bottom: 20px;
+      color: #1ed8bf;
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+      animation: fadeIn 1s ease-in-out infinite;
+
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      text-align: center;
+      color: rgba(17, 238, 216, 0.721);
+      background-color: #08665b55;
+      padding: 15px 40px;
+      border-radius: 15px;
+      border: 2px solid rgba(17, 238, 216, 0.284);
+      box-shadow: 0 0 20px rgba(181, 254, 248, 0.3);
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+
+      
+    }
+
+    h3 {
+      margin-bottom: 30px;
+      text-align: center;
+      color: #ffffff;
+      padding: 15px 40px;
+      
+    }
+
+    .perfil {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 40px;
+      border: 5px double rgba(17, 238, 216, 0.284);
+      box-shadow: 0 0 20px rgba(181, 254, 248, 0.3);
+      
+    }
+
+    .perfil img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+
+    .proyecto {
+      margin-bottom: 30px;
+    }
+
+    .proyecto h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .proyecto img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .proyecto p {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+      background-color: #149898;
+      padding: 5px 10px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      display: inline-blockflex;
+      text-align: center;
+    }
+
+    p {
+      color: #ffffff;
+      text-decoration: none;
+      background-color: #0a48486c;
+      padding: 5px 10px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 10px;
+    }
+
+    
+
+    .contact-info {
+      color: #05ffe2;
+      list-style-type: none;
+      padding: 2px;
+      text-align: center;
+    }
+
+    
+    footer {
+      background-color: #1b1a1a;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+      color: #575858;
+      text-decoration: none;
+      background-color: #1b1a1a;
+      padding: 5px 10px;
+      text-align: center;
+      
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+
+
+    .cuadrado-perfecto
+    {
+      width: 100%;
+      padding-bottom: 100%;
+      position: relative;
+    }
+
+    .cuadrado-perfecto img
+    {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .container
+    {
+      width: 1140px;
+      margin: 0 auto 0 auto;
+      padding-right: 15ppx;
+      padding-left: 15px;
+      position: relative;
+    
+    }
+
+    .container-fluid
+    {
+      width: 100%;
+      padding-right: 0px;
+      padding-left: 15px;
+      position: relative;
+    }
+
+    .row
+    {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15ppx;
+    }
+
+
+    .columna
+    {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    .columna-33
+    {
+      width: 33.33%;
+    }
+
+    #galeria
+    {
+
+    }
+
+    #galeria h4
+    {
+      padding-right: 15px;
+      padding-left: 15px;
+      text-align: center;
+      position: absolute;
+      top: 40%;
+      color: rgb(5, 240, 205);
+      font-size: 18px;
+      width: 100%;
+    }
+
+    #galeria img
+    {
+      filter: grayscale(1);
+    }
+
+    #galeria .cuadrado-perfecto:hover img
+    {
+      filter: grayscale(0);
+    }
+
+    #galeria .cuadrado-perfecto:hover h4
+    {
+      display: none;
+    }
+
+    
+    /* Estilos card carrusel */
+
+    .slider{width: 100%}
+    .slider input{display: none;}
+    .testimonials{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      min-height: 300px;
+      perspective: 400px;
+      overflow: hidden;
+    }
+    .testimonials .item{
+      width: 280px;
+      padding: 10px;
+      border-radius: 45px;
+      background-color: #171717;
+      position: absolute;
+      border: 5px double rgba(17, 238, 216, 0.284);
+      top: 0;
+      box-sizing: border-box;
+      text-align: center;
+      transition: transform 0.4s;
+      box-shadow: 0 0 10px rgba(181, 254, 248, 0.3);
+      user-select: none;
+      cursor: pointer;
+    }
+    .testimonials .item h1{font-size: 114px; color: white;}
+    .dots{display: flex; justify-content: center;align-items: center;}
+    .dots label{
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: #413B52;
+      margin: 7px;
+      transition-duration: 0.2s;
+    }
+      #t-1:checked ~ .dots label[for="t-1"],
+      #t-2:checked ~ .dots label[for="t-2"],
+      #t-3:checked ~ .dots label[for="t-3"],
+      #t-4:checked ~ .dots label[for="t-4"],
+      #t-5:checked ~ .dots label[for="t-5"]{
+        transform: scale(2);
+        background-color: #fff;
+        box-shadow: 0px 0px 0px 3px #dddddd24;
+      }
+
+      #t-1:checked ~ .dots label[for="t-2"],
+      #t-2:checked ~ .dots label[for="t-1"],
+      #t-2:checked ~ .dots label[for="t-3"],
+      #t-3:checked ~ .dots label[for="t-2"],
+      #t-3:checked ~ .dots label[for="t-4"],
+      #t-4:checked ~ .dots label[for="t-3"],
+      #t-4:checked ~ .dots label[for="t-5"],
+      #t-5:checked ~ .dots label[for="t-4"]{
+        transform: scale(1.5);
+      }
+
+      #t-1:checked ~ .testimonials label[for="t-3"],
+      #t-2:checked ~ .testimonials label[for="t-4"],
+      #t-3:checked ~ .testimonials label[for="t-5"],
+      #t-4:checked ~ .testimonials label[for="t-1"],
+      #t-5:checked ~ .testimonials label[for="t-2"]{
+        transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+        z-index: 2;
+      }
+
+      #t-1:checked ~ .testimonials label[for="t-2"],
+      #t-2:checked ~ .testimonials label[for="t-3"],
+      #t-3:checked ~ .testimonials label[for="t-4"],
+      #t-4:checked ~ .testimonials label[for="t-5"],
+      #t-5:checked ~ .testimonials label[for="t-1"]{
+        transform: translate3d(300px, 0, -90px) rotateY(-15deg);
+        z-index: 3;
+      }
+
+      #t-2:checked ~ .testimonials label[for="t-1"],
+      #t-3:checked ~ .testimonials label[for="t-2"],
+      #t-4:checked ~ .testimonials label[for="t-3"],
+      #t-5:checked ~ .testimonials label[for="t-4"],
+      #t-1:checked ~ .testimonials label[for="t-5"]{
+        transform: translate3d(-300px, 0, -90px) rotateY(15deg);
+        z-index: 3;
+      }
+
+      #t-3:checked ~ .testimonials label[for="t-1"],
+      #t-4:checked ~ .testimonials label[for="t-2"],
+      #t-5:checked ~ .testimonials label[for="t-3"],
+      #t-2:checked ~ .testimonials label[for="t-5"],
+      #t-1:checked ~ .testimonials label[for="t-4"]{
+        transform: translate3d(-600px, 0, -180px) rotateY(25deg);
+        
+      }
+
+      #t-1:checked ~ .testimonials label[for="t-1"],
+      #t-2:checked ~ .testimonials label[for="t-2"],
+      #t-3:checked ~ .testimonials label[for="t-3"],
+      #t-4:checked ~ .testimonials label[for="t-4"],
+      #t-5:checked ~ .testimonials label[for="t-4"],
+      #t-5:checked ~ .testimonials label[for="t-5"]{
+        
+        z-index: 4;
+    }
+
+
+    /* Estilos interactivos */
+
+    a:hover {
+      background-color: #12fcbd;
+    }
+
+    a:active {
+     background-color: #05ffe2;
+    }
+
+    /* Media queries para diseño responsivo */
+
+    @media screen and (max-width: 768px) {
+    section {
+        padding: 30px;
+    }
+
+
+    section#habilidades h2 {
+        padding: 15px 40px;
+    }
+
+
+    .seccion {
+        padding: 30px;
+    }
+
+    .container
+    {
+      width: 100%;
+    }
+
+
+    .columna-mobile-100 
+    {
+        width: 100%;
+    }
+
+    .columna-mobile-50
+    {
+      width: 50%;
+    }
+
+    #proyectos .bloque-servicio
+    {
+      margin-bottom: 15px;
+    }
+
+    }
+
+    
+    @keyframes highlight {
+      0% {
+        color: #252525;
+      }
+      50% {
+        color: #12fcbd;
+      }
+      100% {
+        color: #067676;
+      }
+    }
+
+    .highlight-animation {
+      animation: highlight 4s infinite;
+      font-size: 35px; /* Tamaño del texto */
+    }
+
+    .center-text {
+      text-align: center; /* Alinear horizontalmente al centro */
+      line-height: 100vh; /* Alinear verticalmente al centro */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .seccion
+    {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .columna {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+
+    #proyectos .bloque-servicio {
+      border: none;
+      background-color: #8bfefe45;
+      border-radius: 15px;
+    }
+
+    #proyectos .bloque-servicio p {
+      color: #f5f0f0;
+      text-decoration: none;
+      background-color: #bfffff00;
+      padding: 10px 10px;
+      text-align: center;
+    }
+
+    #proyectos .bloque-servicio .bloque-img-servicio {
+      border-radius: 15px;
+      box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5);
+      padding: 30px;
+    }
+
+    #proyectos .bloque-servicio .bloque-img-servicio img {
+      width: 100%;
+    }
+
+    #proyectos .bloque-servicio .bloque-img-servicio.cuadrado-perfecto {
+      padding-bottom: 56.25%;
+    }
+
+    #proyectos .bloque-servicio .bloque-contenido-servicio {
+      padding: 10px;
+    }
+
+    #proyectos .bloque-servicio .bloque-contenido-servicio h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+
+  </style>
 </head>
+
 <body>
   <header>
-    <h1>Bienvenido a mi página web</h1>
+    <nav>
+      <h1 class="highlight-animation">NIDIA  ALVAREZ</h1>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Acerca de</a></li>
-      <li><a href="#">Servicios</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </nav>
+  <section id="inicio">
+    <h2>Bienvenido a mi Portafolio</h2>
+    <div class="perfil">
+        <img src="IMG-20180331-WA0019-1.jpg" alt="Foto de Nidia Alvarez">
+      </div>
 
-  <section>
-    <h2>Acerca de</h2>
-    <p>¡Hola! Mi nombre es Nidia y esta es mi primera página web.</p>
+    <p>¡Hola! Soy Nidia Alvarez, Bachiller en Arquitectura apasionada por crear espacios funcionales y estéticamente atractivos.
+      
+      Mi objetivo es combinar mis conocimientos técnicos y creativos para diseñar proyectos arquitectónicos que satisfagan las necesidades y deseos de mis clientes.
+      
+      Además de mi formación académica, tengo experiencia en el uso de software de diseño asistido por computadora, lo que me permite visualizar y comunicar mis ideas de manera efectiva. 
+
+    </p>
   </section>
 
-  <section>
-    <h2>Servicios</h2>
-    <ul>
-      <li>Servicio 1</li>
-      <li>Servicio 2</li>
-      <li>Servicio 3</li>
+  <section id="proyectos" class="seccion">
+    <h2>Mis Proyectos Destacados</h2>
+  
+
+    <div class="container">
+      <div class="row">
+        <div class="columna columna-33 columna-mobile-100">
+          <div class="bloque-servicio">
+            <div class="bloque-img-servicio cuadrado-perfecto">
+              <img src="16.jpg">
+            </div>
+            <div class="bloque-contenido-servicio">
+              <h3>Proyecto 1</h3>
+              <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras non egestas turpis, eu pharetra tellus. Etiam vitae tempus diam.</p>
+              <a href="#" class="boton boton-blanco">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="columna columna-33 columna-mobile-100">
+          <div class="bloque-servicio">
+            <div class="bloque-img-servicio cuadrado-perfecto">
+              <img src="16.jpg">
+            </div>
+            <div class="bloque-contenido-servicio">
+              <h3>Proyecto 2</h3>
+              <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras non egestas turpis, eu pharetra tellus. Etiam vitae tempus diam.</p>
+              <a href="#" class="boton boton-blanco">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="columna columna-33 columna-mobile-100">
+          <div class="bloque-servicio">
+            <div class="bloque-img-servicio cuadrado-perfecto">
+              <img src="16.jpg">
+            </div>
+            <div class="bloque-contenido-servicio">
+              <h3>Proyecto 3</h3>
+              <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras non egestas turpis, eu pharetra tellus. Etiam vitae tempus diam.</p>
+              <a href="#" class="boton boton-blanco">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
+
+  <section id="galeria">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="columna-33 columna-mobile-50">
+          <div class="cuadrado-perfecto">
+            <img src="16.jpg">
+            <h4>Sala de departamento</h4>
+          </div>
+        </div>
+        <div class="columna-33 columna-mobile-50">
+          <div class="cuadrado-perfecto">
+            <img src="interior  children.jpg">
+            <h4>Imagen2</h4>
+          </div>
+        </div>
+        <div class="columna-33 columna-mobile-50">
+          <div class="cuadrado-perfecto">
+            <img src="EXTERIOR CON PISCINA 1200X1500_ok.jpg">
+            <h4>Imagen3</h4>
+          </div>
+        </div>
+        <div class="columna-33 columna-mobile-50">
+          <div class="cuadrado-perfecto">
+            <img src="EXTERIOR CON PISCINA 1200X1500_ok.jpg">
+            <h4>Imagen4</h4>
+          </div>
+        </div>
+        <div class="columna-33 columna-mobile-50">
+          <div class="cuadrado-perfecto">
+            <img src="interior  children.jpg">
+            <h4>Imagen5</h4>
+          </div>
+        </div>
+        <div class="columna-33 columna-mobile-50">
+          <div class="cuadrado-perfecto">
+            <img src="16.jpg">
+            <h4>Imagen6</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    
+    <div class="slider">
+      <input type="radio" name="testimonial" id="t-1">
+      <input type="radio" name="testimonial" id="t-2">
+      <input type="radio" name="testimonial" id="t-3" checked>
+      <input type="radio" name="testimonial" id="t-4">
+      <input type="radio" name="testimonial" id="t-5">
+      <div class="testimonials">
+        <label class="item" for="t-1">
+          <h1><img src="Autocad-Logotipo-190pxpx sf.png"></h2>
+        </label>
+        <label class="item" for="t-2">
+          <h1><img src="sketchup-vector-logo200x200px.png"></h2>
+        </label>
+        <label class="item" for="t-3">
+          <h1><img src="figma-logo_brandlogos.net_6n1pb-200x200px.png"></h2>
+        </label>
+        <label class="item" for="t-4">
+          <h1><img src="adobe_photoshop-logo-brandlogos.net200x200px.png"></h2>
+        </label>
+        <label class="item" for="t-5">
+          <h1><img src="master-bim-manager-revit261x200px.png"></h2>
+        </label>
+      </div>
+      <br/>
+      <div class="dots">
+        <label for="t-1"></label>
+        <label for="t-2"></label>
+        <label for="t-3"></label>
+        <label for="t-4"></label>
+        <label for="t-5"></label>
+      </div>
+    </div>
+
+
+  </section>
+
+ 
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    
+    <ul class="contact-info">
+      <li><i class="fa-solid fa-phone"></i>  +51 955 555 555</li>
+      <li><i class="fa-solid fa-envelope"></i> alvarez@gmail.com</li>
+  
+      
+<!-- Estos con link-->
+
+      <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
     </ul>
   </section>
+
 
   <footer>
-    <p>&copy; 2023 - Todos los derechos reservados</p>
+    <p>Derechos de autor &copy; 2023 Nidia Alvarez</p>
   </footer>
+
+
 </body>
 </html>
