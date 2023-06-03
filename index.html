@@ -6,6 +6,7 @@
   <title>Mi Portafolio Nidia</title>
   <link rel="stylesheet" href="styles.css"> <!-- Archivo CSS para los estilos -->
   <script src="https://kit.fontawesome.com/99fbba3b83.js" crossorigin="anonymous"></script>
+  
   <style>
         /* Reset de estilos */
     * {
@@ -24,6 +25,7 @@
     }
 
     header {
+
       background-color: none;
       padding: 40px;
       color: #FF1493;
@@ -585,14 +587,71 @@
     }
 
 
+
+    /* Estilos para el menú */
+    .menu-icon {
+      display: none; /* Oculta el icono del menú en versiones no móviles */
+      color: #05ffe2;
+      font-size: 24px;
+    }
+
+    
+
+    @media (max-width: 768px) {
+      /* Estilos para versiones móviles */
+      .menu-icon {
+        display: inline-block; /* Muestra el icono del menú en versiones móviles */
+        cursor: pointer;
+      }
+
+      .menu {
+        display: none; /* Oculta la lista de navegación en versiones móviles */
+      }
+
+      .menu.active {
+        display: block; /* Muestra la lista de navegación cuando se activa el menú */
+      }
+
+
+
+      /* Menu li a*/
+
+      .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    }
+
+
+
+
   </style>
 </head>
 
 <body>
+
+ 
+
+
   <header>
     <nav>
+
       <h1 class="highlight-animation">NIDIA  ALVAREZ</h1>
-      <ul>
+      <div class="menu-icon">&#9776;</div> <!-- Icono del menú -->
+    
+      <ul class="menu">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
@@ -630,7 +689,7 @@
             <div class="bloque-contenido-servicio">
               <h3>Proyecto 1</h3>
               <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras non egestas turpis, eu pharetra tellus. Etiam vitae tempus diam.</p>
-              <a href="#" class="boton boton-blanco">Ver más</a>
+              
             </div>
           </div>
         </div>
@@ -642,7 +701,7 @@
             <div class="bloque-contenido-servicio">
               <h3>Proyecto 2</h3>
               <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras non egestas turpis, eu pharetra tellus. Etiam vitae tempus diam.</p>
-              <a href="#" class="boton boton-blanco">Ver más</a>
+              
             </div>
           </div>
         </div>
@@ -654,7 +713,7 @@
             <div class="bloque-contenido-servicio">
               <h3>Proyecto 3</h3>
               <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras non egestas turpis, eu pharetra tellus. Etiam vitae tempus diam.</p>
-              <a href="#" class="boton boton-blanco">Ver más</a>
+              
             </div>
           </div>
         </div>
@@ -747,7 +806,7 @@
 
   </section>
 
- 
+
 
   <section id="contacto">
     <h2>Contacto</h2>
@@ -770,6 +829,16 @@
     <p>Derechos de autor &copy; 2023 Nidia Alvarez</p>
   </footer>
 
+  <script>
+    // Funcionalidad para mostrar/ocultar el menú en versiones móviles
+    const menuIcon = document.querySelector('.menu-icon');
+    const menu = document.querySelector('.menu');
+
+    menuIcon.addEventListener('click', function() {
+      menu.classList.toggle('active');
+    });
+    
+  </script>
 
 </body>
 </html>
